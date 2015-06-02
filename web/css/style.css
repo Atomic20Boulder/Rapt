@@ -1,0 +1,147 @@
+body{
+	color:#282835;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1em;
+}
+a{
+	cursor: auto;
+}
+ul{
+	list-style-type:none;
+	margin: 0; 
+	-webkit-margin-before:1em;
+	-webkit-margin-after:1em;
+	-webkit-margin-start:0px;
+	-webkit-margin-end:0px;
+	-webkit-padding-start:40px;
+}
+p, li{
+	line-height: 1.5em;
+}
+p, ul{
+	display: block;
+}
+footer {
+	padding: 2px;
+	background-color: white;
+	box-shadow: 0 -5px 13px rgba(0,0,0,0.11);
+	-moz-box-shadow: 0 -5px 13px rgba(0,0,0,0.11);
+	-webkit-box-shadow: 0 -5px 13px rgba(0,0,0,0.11);
+	padding: 20px 0px 10px 0px;
+}
+
+
+#header{
+ 	background-color: white;
+	box-shadow: 0 5px 13px rgba(0,0,0,0.11);
+	-moz-box-shadow: 0 5px 13px rgba(0,0,0,0.11);
+	-webkit-box-shadow: 0 5px 13px rgba(0,0,0,0.11);
+	padding: 10px 0px 20px 0px;
+	text-align: center;
+}
+
+#wrapper{
+	background: #ebe9e9;
+	background: -moz-linear-gradient(top,#ebe9e9 0,#dbdada 100%);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#ebe9e9),color-stop(100%,#dbdada));
+	background: -webkit-linear-gradient(top,#ebe9e9 0,#dbdada 100%);
+	background: -o-linear-gradient(top,#ebe9e9 0,#dbdada 100%);
+	background: -ms-linear-gradient(top,#ebe9e9 0,#dbdada 100%);
+	background: linear-gradient(to bottom,#ebe9e9 0,#dbdada 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebe9e9',endColorstr='#dbdada',GradientType=0);
+}
+
+.bg-overlay-top {
+	background: url('../images/bg-left-layer.png') no-repeat left top;
+}
+.bg-overlay-bottom {
+	background: url('../images/bg-right-layer.png') no-repeat right bottom;
+}
+
+.video{
+	margin: 0 auto;
+	margin-top: 5%;
+}
+.learnmore{
+	margin-top: 2%;
+}
+.socialmedia{
+	background: url('../images/blackrock_logo-s.png') no-repeat left -8px;
+	border-bottom: 1px solid #ccc;
+	height: 49px;
+	padding: 0;
+	text-align: right;
+}
+.main-content {
+	padding-bottom: 50px;
+}
+
+.socialmedia li, .socialmedia a{
+	display: inline-block;
+}
+.icon-facebook{
+	background: url('../images/blk-one-sprite-icons.png') no-repeat -8px -2274px;
+	height: 30px;
+	width: 30px;
+}
+.icon-facebook:hover{
+	background: url('../images/blk-one-sprite-icons.png') no-repeat -8px -2454px;
+	height: 30px;
+	width: 30px;
+}
+.icon-linkedin{
+	background: url('../images/blk-one-sprite-icons.png') no-repeat -8px -2409px;
+	width: 30px;
+	height: 30px;
+}
+.icon-linkedin:hover{
+	background: url('../images/blk-one-sprite-icons.png') no-repeat -8px -2589px;
+	width: 30px;
+	height: 30px;
+}
+.icon-twitter{
+	background: url('../images/blk-one-sprite-icons.png') no-repeat -8px -2364px;
+	width: 30px;
+	height: 30px;
+}
+.icon-twitter:hover{
+	background: url('../images/blk-one-sprite-icons.png') no-repeat -8px -2544px;
+	width: 30px;
+	height: 30px;
+}
+.icon-youtube{
+	background: url('../images/blk-one-sprite-icons.png') no-repeat -8px -2319px;
+	width: 30px;
+	height: 30px;
+}
+.icon-youtube:hover{
+	background: url('../images/blk-one-sprite-icons.png') no-repeat -8px -2499px;
+	width: 30px;
+	height: 30px;
+}
+.icon-blk-blog{
+	background: url('../images/blk-one-sprite-icons.png') no-repeat -8px -2634px;
+	width: 30px;
+	height: 30px;
+}
+.icon-blk-blog:hover{
+	background: url('../images/blk-one-sprite-icons.png') no-repeat -8px -2679px;
+	width: 30px;
+	height: 30px;
+}
+.icon-chevron {
+	background: url('../images/blk-one-sprite-icons.png') no-repeat -20px -1696px;
+	width: 5px;
+	height: 9px;
+	padding-left: 15px;
+}
+.footer {
+	max-width: 980px;
+}
+.footnotes{
+	border: 0;
+	color:#282828;
+	font-size: 12px;
+	line-height: 18px;
+}
