@@ -31,7 +31,7 @@
 		  			<div class="row">
 						<div class="col-xs-12 video">
 							<div class="embed-responsive embed-responsive-16by9">
-								<iframe class="embed-responsive-item" src="http://cdn1.raptmedia.com/projects/jxK53Bnb/embed?autoplay=false&amp;controls=below">&lt;p style="text-align:center"&gt;Iframes are required to view this content.&lt;/p&gt;</iframe>
+								<iframe class="embed-responsive-item" src="https://cdn1.raptmedia.com/projects/jxK53Bnb/embed?autoplay=false&amp;controls=below">&lt;p style="text-align:center"&gt;Iframes are required to view this content.&lt;/p&gt;</iframe>
 							</div>
 						</div>		
 						<div class="col-xs-12 learnmore">
