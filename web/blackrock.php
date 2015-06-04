@@ -15,12 +15,13 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="css/style.css">
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<script src="https://cdn1.raptmedia.com/system/scripts/api.v2.jq.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdn1.raptmedia.com/system/scripts/api.v2.min.js.gz"></script>
 	<script type="text/javascript">
 	  !function(a,b){a("Keen","https://d26b395fwzu5fz.cloudfront.net/3.2.4/keen.min.js",b)}(function(a,b,c){var d,e,f;c["_"+a]={},c[a]=function(b){c["_"+a].clients=c["_"+a].clients||{},c["_"+a].clients[b.projectId]=this,this._config=b},c[a].ready=function(b){c["_"+a].ready=c["_"+a].ready||[],c["_"+a].ready.push(b)},d=["addEvent","setGlobalProperties","trackExternalLink","on"];for(var g=0;g<d.length;g++){var h=d[g],i=function(a){return function(){return this["_"+a]=this["_"+a]||[],this["_"+a].push(arguments),this}};c[a].prototype[h]=i(h)}e=document.createElement("script"),e.async=!0,e.src=b,f=document.getElementsByTagName("script")[0],f.parentNode.insertBefore(e,f)},this);
 	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	
 
 	</head>
 	<body>
@@ -35,7 +36,7 @@
 		  			<div class="row">
 						<div class="col-xs-12 video">
 							<div class="embed-responsive embed-responsive-16by9">
-								<iframe class="embed-responsive-item" src="https://cdn1.raptmedia.com/projects/jxK53Bnb/embed?autoplay=false&amp;controls=below">&lt;p style="text-align:center"&gt;Iframes are required to view this content.&lt;/p&gt;</iframe>
+								<iframe name="test" class="embed-responsive-item" src="https://cdn1.raptmedia.com/projects/jxK53Bnb/embed?autoplay=false&amp;controls=below">&lt;p style="text-align:center"&gt;Iframes are required to view this content.&lt;/p&gt;</iframe>
 							</div>
 						</div>		
 						<div class="col-xs-12 learnmore">
@@ -75,6 +76,7 @@
 						<br>
 						<p class="footnotes"><strong><em>Investing involves risk, including possible loss of principal.</em></strong></p>
 						<p class="footnotes">USR-6252</p>
+						<div id="my_chart"></div>
 					</div><!-- col-xs-12 -->
 				</div><!-- container -->
 			</footer>
@@ -86,30 +88,23 @@
         projectId: "556e0a16672e6c08523b6389",
         writeKey: "695c2959c45b1a2d67874027aea603d58cf61dd626b2a95606242f22068d907e8b1fcbefcb89f7754dc82e02e5852db896838c9c9aba49ef6e5e71f844e1df34392051f07b5ba822fbfc4568a7d9de5e3ebd990e3342982dd7ad133ff916e02f9878f939d6b813c16c0bf9b8f3cd94de"
       });
-
       raptor.api.on("ready", function(event, el){
       	raptor.settings("defaultIFrame", el.name);
-
-
       	el.onload = function(){
       		raptor.api.load();
-
       	}
-
       });
     	raptor.api.on("inboundReady", function(event, data){
       	console.log("inbound commands ready");
-      	raptor.api.nodes();
-      	//raptor.api.play();
    	  });
    	  raptor.api.on("button", function(event, data){
    	  	console.log(data);
-   	  	raptor.api.pause();
-   	  	raptor.api.setTimePercentage(0.9);
-   	  	if (data.action == "watch") {
+   	  	if (data.action == "") {
    	  		var purchaseEvent = {
-            item: "golden gadget",  
-            price: 25.50,
+            item: "black crack rock",  
+            price: 1000,
+            amount: 1,
+            weight: 'gram',
             referrer: document.referrer,
             keen: {
               timestamp: new Date().toISOString()
@@ -131,6 +126,20 @@
    	  raptor.api.on("projectStart", function(event, data){
    	  	console.log(data);
    	  }); 		
+   	  /*var client = new Keen({
+   	    projectId: "556e0a16672e6c08523b6389",
+   	    readKey: "c96c1d3e04436179a5722e2c39fa2697e7b4ef2b4ef204016184a6fce671c07c8438fb8b1d3b8fd521588a06fcc400dcc379db38e07d12ec611a5c902462f86a2323e52eaac54c4a0c8af98ee01a32935f4f509d49b72e33dabd7a0e1d2e0f007142bcdc62d3ddbc5060d9ba7e3812cf"
+
+   	  });
+   	  Keen.ready(function(){
+   	    var query = new Keen.Query("extraction", {
+   	      eventCollection: "purchases",
+   	      timezone: "UTC"
+   	    });
+   	    client.draw(query, document.getElementById("my_chart"), {
+   	      // Custom configuration here
+   	    });
+   	  });*/
     </script>
 	</body>	
 	</html>
