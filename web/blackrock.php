@@ -17,6 +17,10 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="https://cdn1.raptmedia.com/system/scripts/api.v2.jq.min.js"></script>
+	<script type="text/javascript">
+	  !function(a,b){a("Keen","https://d26b395fwzu5fz.cloudfront.net/3.2.4/keen.min.js",b)}(function(a,b,c){var d,e,f;c["_"+a]={},c[a]=function(b){c["_"+a].clients=c["_"+a].clients||{},c["_"+a].clients[b.projectId]=this,this._config=b},c[a].ready=function(b){c["_"+a].ready=c["_"+a].ready||[],c["_"+a].ready.push(b)},d=["addEvent","setGlobalProperties","trackExternalLink","on"];for(var g=0;g<d.length;g++){var h=d[g],i=function(a){return function(){return this["_"+a]=this["_"+a]||[],this["_"+a].push(arguments),this}};c[a].prototype[h]=i(h)}e=document.createElement("script"),e.async=!0,e.src=b,f=document.getElementsByTagName("script")[0],f.parentNode.insertBefore(e,f)},this);
+	</script>
 
 	</head>
 	<body>
@@ -76,5 +80,57 @@
 			</footer>
 
 		</div><!-- wrapper -->
+
+    <script type="text/javascript">
+    	var client = new Keen({
+        projectId: "556e0a16672e6c08523b6389",
+        writeKey: "695c2959c45b1a2d67874027aea603d58cf61dd626b2a95606242f22068d907e8b1fcbefcb89f7754dc82e02e5852db896838c9c9aba49ef6e5e71f844e1df34392051f07b5ba822fbfc4568a7d9de5e3ebd990e3342982dd7ad133ff916e02f9878f939d6b813c16c0bf9b8f3cd94de"
+      });
+
+      raptor.api.on("ready", function(event, el){
+      	raptor.settings("defaultIFrame", el.name);
+
+
+      	el.onload = function(){
+      		raptor.api.load();
+
+      	}
+
+      });
+    	raptor.api.on("inboundReady", function(event, data){
+      	console.log("inbound commands ready");
+      	raptor.api.nodes();
+      	//raptor.api.play();
+   	  });
+   	  raptor.api.on("button", function(event, data){
+   	  	console.log(data);
+   	  	raptor.api.pause();
+   	  	raptor.api.setTimePercentage(0.9);
+   	  	if (data.action == "watch") {
+   	  		var purchaseEvent = {
+            item: "golden gadget",  
+            price: 25.50,
+            referrer: document.referrer,
+            keen: {
+              timestamp: new Date().toISOString()
+            }
+          };
+
+          // Send it to the "purchases" collection
+          client.addEvent("purchases", purchaseEvent, function(err, res){
+            if (err) {
+              // there was an error!
+            }
+            else {
+              // see sample response below
+            }
+          });
+   	  	}
+   	  });
+
+   	  raptor.api.on("projectStart", function(event, data){
+   	  	console.log(data);
+   	  }); 		
+    </script>
 	</body>	
 	</html>
