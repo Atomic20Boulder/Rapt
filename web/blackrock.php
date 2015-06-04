@@ -6,7 +6,7 @@
 	<head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-	<title>BLACKROACKtitle></title>
+	<title>BLACKROCK</title>
 	<link type="image/x-icon" href="../images/favicon.ico" rel="icon">
 	<meta name="description" content="">
 	<meta name="author" content="">
